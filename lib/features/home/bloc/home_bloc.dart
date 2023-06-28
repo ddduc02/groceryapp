@@ -34,6 +34,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       HomeProductWishlistButtonClickedEvent event, Emitter<HomeState> emit) {
     print("wishlist button clicked");
     wishlistItems.add(event.clickedProduct);
+    print("Check wishlist + ${wishlistItems[0]}");
     emit(HomeProductWishlistActionState());
   }
 
